@@ -1,13 +1,15 @@
-// src/App.jsx
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 import Layout from "./layouts/Layout";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/*" element={<Layout />} />
-    </Routes>
+    <BrowserRouter>
+      <Layout>
+        <AppRoutes />
+      </Layout>
+    </BrowserRouter>
   );
 };
 
